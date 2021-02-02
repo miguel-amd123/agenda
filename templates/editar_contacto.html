@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+	<title>Actualizar contacto</title>
+{% block content %}
+	<center>
+	<div class="container">	
+	<h1>Editar</h1>
+
+	
+	<nav class="navbar navbar-dark bg-dark">
+	</nav>
+	<br>
+	<br>
+<form method="POST" action="{{ url_for('actualizar')}}">
+	<h5>Contacto</h5>
+	
+	<input type="hidden" name="contacto_id" id="contacto_id" value="{{ contactos.contacto_id }}">
+<br>	
+	<input class="form-control" type="text" placeholder="Nombre_Contacto" name="nombre" value="{{ contactos.nombre }}"  id="nombre">
+<br>
+	<input class="form-control" type="text" placeholder="Telefono" value="{{ contactos.telefono }}" name="telefono" id="telefono">
+<br>
+	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" value="{{ contactos.email }}" name="email" id="email">
+<br>
+	<input class="form-control" type="text" placeholder="Calle" value="{{ contactos.calle }}" name="calle" id="calle">
+<br>
+	<input class="form-control" type="text" placeholder="Numero" value="{{ contactos.numero }}" name="numero" id="numero">
+<br>
+	<input class="form-control" type="text" placeholder="Colonia" value="{{ contactos.colonia }}" name="colonia" id="colonia">
+<br>	
+	<input class="form-control" type="text" placeholder="Localidad" value="{{ contactos.localidad }}" name="localidad" id="localidad">
+<br>
+	<input class="form-control" type="text" placeholder="Municipio" value="{{ contactos.municipio }}"name="municipio" id="municipio">
+<br>
+	<input class="form-control" type="text" placeholder="Estado" value="{{ contactos.estado }}"name="estado" id="estado">
+</center>
+<center>
+	<input type="submit" class="btn btn-primary"  >
+	<a href="/../lista_contacto"  type="button" class="btn btn-danger">Cancelar</a>
+</center>
+</form>
+</div>
+{% endblock %}

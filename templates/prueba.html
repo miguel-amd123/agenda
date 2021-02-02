@@ -1,0 +1,56 @@
+
+
+	{% block title %} hola mundo{% endblock %}
+</head>
+<body>
+
+	<h1>Lista de Contactos</h1>
+<nav class="navbar navbar-dark bg-dark">
+	<a href="/menu" type="button" class="btn btn-success">Regresar</a>
+</nav>
+				<table class="table table-dark table-hover">
+					<thead class="">
+						<tr>
+							<th>#</th>
+							<th>Nombre</th>
+							<th>Telefono</th>
+							<th>Email</th>
+							<th>Calle</th>
+							<th>No.interior</th>
+							<th>Colonia</th>
+							<th>Localidad</th>
+							<th>Municipio</th>
+							<th>Estado</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						{% for a in arg %}
+						<tr>
+							<th scope="row">{{a.contacto_id}}</th>
+							<td>{{a.contacto_name}}</td>
+							<td>{{a.telefono}}</td>
+							<td>{{a.email}}</td>
+							<td>{{a.calle}}</td>
+							<td>{{a.numero}}</td>
+							<td>{{a.colonia}}</td>
+							<td>{{a.localidad}}</td>
+							<td>{{a.municipio}}</td>
+							<td>{{a.estado}}</td>
+
+							<td>
+								<a href="/editar_contacto/{{ a.contacto_id }}"  class="btn">Editar</a>
+								<a href="/eliminar/{{ a.contacto_id }}" class="btn red">Eliminar</a>
+							</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+
+
+
+
+
+	
+</body>
+</html>

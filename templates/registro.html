@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+      <div>
+        <p><img src={{url_for('static', filename='user2.jpg')}} width="100"></p>
+      </div>
+    <!-- Login Form -->
+    <form action="/registro" method="POST">
+    	<center>
+      <input type="text" id="nombre_usuario" class="fadeIn second" name="nombre_usuario" placeholder="Correo">
+      <input type="password" id="passw" class="fadeIn third" name="passw" placeholder="Password">
+      <input type="password" id="confirmar" class="fadeIn third" name="confirmar" placeholder="Confirmacion">
+      <!-- <p>{{mensaje}}</p> -->
+      </center>
+
+    <!-- Remind Passowrd -->
+    
+    <div id="formFooter">
+     <input type="submit" class="btn btn-primary" value="Registrar">
+    </div>
+    </form>
+    <p>{{mensaje}}</p>
+    <a href="/" type="button" class="btn btn-primary">LogIn</a>
+  </div>
+</div>

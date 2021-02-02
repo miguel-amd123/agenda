@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar nuevo contacto{% endblock %}	
+
+{% block content %}
+	<center>
+	<div class="container">	
+	<h1>Agregar Nuevo Contacto</h1>
+
+	
+	<nav class="navbar navbar-dark bg-dark">
+ 		<a href="/menu" type="button" class="btn btn-success">Regresar</a>
+	</nav>
+	<br>
+	<br>
+	<h5>Contacto</h5>
+<form action="/nuevo_contacto" method="POST">
+	<input class="form-control" type="text" placeholder="Nombre_Contacto" name="nombre" id="nombre">
+<br>
+	<input class="form-control" type="text" placeholder="Telefono" id="telefono" name="telefono">
+<br>
+	<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" name = "email">
+<br>
+	<input class="form-control" type="text" placeholder="Calle" name="calle" id="calle">
+<br>
+	<input class="form-control" type="text" placeholder="Numero interior" name="numero" id="numero">
+<br>
+	<input class="form-control" type="text" placeholder="Colonia" name="colonia" id="colonia">
+<br>	
+	<input class="form-control" type="text" placeholder="Localidad" name="localidad" id="localidad">
+<br>
+	<input class="form-control" type="text" placeholder="Municipio" name="municipio" id="municipio">
+<br>
+	<input class="form-control" type="text" placeholder="Estado" name="estado" id="estado">	
+</center>
+<center>
+<input type="submit" class="btn btn-primary" >
+</form>
+</center>
+</div>
+{% endblock %}

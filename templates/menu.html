@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+	{% block title %} Menu {% endblock %}
+</head>
+{% block content %}
+	<center>
+
+		<h1>Bienvenid@ a tu agenda personal</h1>
+
+<nav class="navbar navbar-dark bg-dark">	
+	<table class="table">
+		<tr>
+			<th><a href="/nueva_agenda" type="button" class="btn btn-primary">AgregarContacto</a></th>
+			<th><a href="/lista_contacto" type="button" class="btn btn-primary">Contactos</a></th>
+			<th><a href="/" type="button" class="btn btn-danger">LogOut</a></th>
+		</tr>
+	</table>
+</nav>	
+	</center> 
+	
+
+<p>{{ mensaje }}</p>
+{% endblock %}
+</html>

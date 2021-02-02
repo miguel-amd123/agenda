@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<form method="POST" action="{{ url_for('actualizar_a')}}">
+	<h5>Contacto</h5>
+	
+	<input type="hidden" name="contacto_id" id="contacto_id" value="{{ agendas.agendas_id }}">
+<br>	
+	<input class="form-control" type="text" placeholder="Nombre_agenda" name="nombre_ag" value="{{ agenda_name.nombre }}"  id="nombre_ag">
+
+{% endblock %}

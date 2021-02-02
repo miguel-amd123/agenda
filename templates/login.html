@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+      <div>
+        <p><img src={{url_for('static', filename='user.png')}} width="50"></p>
+      </div>
+    <!-- Login Form -->
+    <form action="/loginin" method="POST">
+    	<center>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Correo">
+      <input type="password" id="passw" class="fadeIn third" name="passw" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Login">
+      <p>{{mensaje}}</p>
+      </center>
+    </form>
+      <p>{{mesaje}}</p>
+    <!-- Remind Passowrd -->
+    <form action="">
+    <div id="formFooter">
+      <a class="underlineHover" href="/registro">Registrarse</a>
+    </div>
+    </form>
+  </div>
+</div>
