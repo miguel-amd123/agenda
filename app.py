@@ -70,7 +70,7 @@ class agendas(db.Model):
 class contacto(db.Model):
 	contacto_id = db.Column(db.Integer, primary_key=True)
 	contacto_name = db.Column(db.String(50))
-	telefono = db.Column(db.Integer)
+	telefono = db.Column(db.String(50))
 	email = db.Column(db.String(50))
 	calle = db.Column(db.String(50))
 	numero = db.Column(db.Integer)
